@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-let PORT = 5000
+let PORT = process.env.PORT || 5000
 
 app.get('/', async (req, res) => {
      let red = await newsapi.v2.topHeadlines({

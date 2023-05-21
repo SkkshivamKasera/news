@@ -8,7 +8,6 @@ let PORT = process.env.PORT || 3000
 
 app.get('/', async (req, res) => {
      let red = await newsapi.v2.topHeadlines({
-     q: 'bitcoin',
      category: 'business',
      language: 'en',
      country: 'in'

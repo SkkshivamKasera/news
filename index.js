@@ -11,7 +11,7 @@ app.get('/', async (req, res) => {
      q: 'bitcoin',
      category: 'business',
      language: 'en',
-     country: 'us'
+     country: 'in'
      })
      res.send(red)
 })

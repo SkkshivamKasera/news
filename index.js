@@ -7,13 +7,14 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-let PORT = process.env.PORT || 3000
+let PORT = 5000
 
 app.get('/', async (req, res) => {
      let red = await newsapi.v2.topHeadlines({
-     category: 'business',
+     category: req.query.category,
      language: 'en',
-     country: 'in'
+     country: req.query.country,
+     page: req.query.page
      })
      res.send(red)
 })
